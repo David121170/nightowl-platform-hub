@@ -38,7 +38,7 @@ const CaseStudySocialDarts = () => {
               Competitive Socialising
             </p>
             <h3 className="font-display text-2xl md:text-3xl font-bold tracking-[-0.03em] leading-[0.95] text-foreground mb-2">
-              Social Darts Flagship
+              Flight Club
             </h3>
             <p className="text-primary/80 font-body text-sm italic mb-6">
               Tech‑driven social darts in a buzzing heritage space.
