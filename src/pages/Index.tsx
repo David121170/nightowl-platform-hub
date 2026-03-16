@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import WhoWeAreSection from "@/components/WhoWeAreSection";
 import PlatformSection from "@/components/PlatformSection";
 import OurModelSection from "@/components/OurModelSection";
+import PortfolioSection from "@/components/PortfolioSection";
 import PlatformCapabilitiesSection from "@/components/PlatformCapabilitiesSection";
 import PartnersSection from "@/components/PartnersSection";
 import AlignmentSection from "@/components/AlignmentSection";
