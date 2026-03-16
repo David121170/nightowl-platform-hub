@@ -1,15 +1,8 @@
 import { motion } from "framer-motion";
-import { Target, Gamepad2, Flag } from "lucide-react";
+import { Gamepad2, Flag } from "lucide-react";
+import CaseStudySocialDarts from "@/components/CaseStudySocialDarts";
 
-const concepts = [
-  {
-    icon: Target,
-    title: "Social Darts Venue",
-    category: "Competitive Socialising",
-    description:
-      "A high‑energy social darts experience combining tech‑enabled throwing bays with craft cocktails, shareable food and a late‑night DJ programme. Designed for groups of friends, corporate events and date nights — turning a classic pub game into a premium night out.",
-    highlights: ["Tech‑tracked scoring & gamification", "Private bay bookings for up to 20 guests", "Full food & beverage programme"],
-  },
+const otherConcepts = [
   {
     icon: Gamepad2,
     title: "Arcade Eatertainment Venue",
@@ -27,14 +20,6 @@ const concepts = [
     highlights: ["Full‑motion hydraulic simulators", "Real‑time leaderboards & leagues", "Motorsport‑inspired cocktail bar"],
   },
 ];
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-  },
-};
 
 const item = {
   hidden: { opacity: 0, y: 24 },
@@ -64,17 +49,20 @@ const PortfolioSection = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-3 gap-6"
-        >
-          {concepts.map((concept) => (
+        {/* Full case study: Social Darts */}
+        <div className="mb-8">
+          <CaseStudySocialDarts />
+        </div>
+
+        {/* Remaining concept cards */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {otherConcepts.map((concept) => (
             <motion.div
               key={concept.title}
               variants={item}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-100px" }}
               className="platform-card rounded-2xl p-8 md:p-10 group cursor-default flex flex-col"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
@@ -99,7 +87,7 @@ const PortfolioSection = () => {
               </ul>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
