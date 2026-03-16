@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Clock, DollarSign, Users, CalendarCheck } from "lucide-react";
+import venueDarts from "@/assets/venue-darts.jpg";
 
 const stats = [
   { icon: Clock, label: "Average dwell time", value: "2.4 hours" },
