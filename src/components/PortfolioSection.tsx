@@ -5,7 +5,7 @@ import CaseStudyRacing from "@/components/CaseStudyRacing";
 
 const PortfolioSection = () => {
   return (
-    <section id="portfolio" className="py-24 md:py-32">
+    <section id="portfolio" className="py-24 md:py-32 section-alt">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

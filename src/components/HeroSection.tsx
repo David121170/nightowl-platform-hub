@@ -16,6 +16,17 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as const } },
 };
 
+const scrollToContact = (tab: "brand" | "investor") => {
+  const contactEl = document.getElementById("contact");
+  if (contactEl) {
+    contactEl.scrollIntoView({ behavior: "smooth" });
+    // Dispatch a custom event so ContactSection can pick up the tab
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent("nightowl:contact-tab", { detail: tab }));
+    }, 600);
+  }
+};
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden">
@@ -63,10 +74,20 @@ const HeroSection = () => {
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap justify-center gap-4">
-          <Button variant="amber" size="lg" className="rounded-sm px-8 text-xs tracking-[0.15em] uppercase">
+          <Button
+            variant="amber"
+            size="lg"
+            className="rounded-sm px-8 text-xs tracking-[0.15em] uppercase glow-button"
+            onClick={() => scrollToContact("brand")}
+          >
             Talk to Us About Your Brand
           </Button>
-          <Button variant="ghost-light" size="lg" className="rounded-sm px-8 text-xs tracking-[0.15em] uppercase">
+          <Button
+            variant="ghost-light"
+            size="lg"
+            className="rounded-sm px-8 text-xs tracking-[0.15em] uppercase"
+            onClick={() => scrollToContact("investor")}
+          >
             Speak to Our Investment Team
           </Button>
         </motion.div>
