@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Clock, DollarSign, Users, CalendarCheck } from "lucide-react";
+import venueDarts from "@/assets/venue-darts.jpg";
 
 const stats = [
   { icon: Clock, label: "Average dwell time", value: "2.4 hours" },
@@ -26,14 +27,9 @@ const CaseStudySocialDarts = () => {
       >
         <div className="grid lg:grid-cols-2">
           {/* Image placeholder */}
-          <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] bg-secondary/30 flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-background/40" />
-            <div className="relative z-10 text-center px-8">
-              <Target className="w-12 h-12 text-primary/40 mx-auto mb-4" strokeWidth={1} />
-              <p className="text-muted-foreground text-sm tracking-widest uppercase">
-                Venue imagery
-              </p>
-            </div>
+          <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] overflow-hidden">
+            <img src={venueDarts} alt="Social darts venue with guests" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-br from-background/20 via-transparent to-background/40" />
           </div>
 
           {/* Content */}
