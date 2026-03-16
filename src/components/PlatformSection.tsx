@@ -32,33 +32,30 @@ const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+    transition: { staggerChildren: 0.12, delayChildren: 0.15 },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const } },
 };
 
 const PlatformSection = () => {
   return (
-    <section id="what-we-do" className="py-[16vh] md:py-[20vh]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="what-we-do" className="py-24 md:py-32">
+      <div className="max-w-5xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-16 md:mb-20"
+          className="text-center mb-16 md:mb-20"
         >
-          <p className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4">
+          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6">
             What We Do
-          </p>
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-[-0.03em] leading-[0.95] max-w-3xl">
-            From Discovery to Delivery
           </h2>
-          <p className="text-muted-foreground text-lg mt-6 max-w-2xl leading-relaxed">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
             Every brand in our portfolio follows a disciplined journey — from
             first handshake to opening night and beyond.
           </p>
@@ -69,21 +66,21 @@ const PlatformSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid md:grid-cols-2 gap-8"
         >
           {pillars.map((pillar) => (
             <motion.div
               key={pillar.title}
               variants={item}
-              className="platform-card rounded-2xl p-8 md:p-10 group cursor-default"
+              className="platform-card rounded-lg p-8 group cursor-default"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
                 <pillar.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-lg font-semibold mb-3 text-foreground">
+              <h3 className="font-display text-xl font-normal tracking-wide mb-3 text-foreground">
                 {pillar.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed font-light">
                 {pillar.description}
               </p>
             </motion.div>

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import owlLogo from "@/assets/nightowl-logo.svg";
 
 const navLinks = [
-  { label: "Who We Are", href: "#who-we-are" },
-  { label: "What We Do", href: "#what-we-do" },
+  { label: "Home", href: "#" },
   { label: "Our Model", href: "#our-model" },
-  { label: "Platform", href: "#platform" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "The Platform", href: "#platform" },
   { label: "Partners", href: "#partners" },
   { label: "Contact", href: "#contact" },
 ];
@@ -27,34 +27,39 @@ const Navigation = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl"
+      className="fixed top-0 left-0 right-0 z-50"
     >
       <nav
-        className={`nav-island rounded-full h-14 px-6 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "shadow-lg" : ""
+        className={`h-16 px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
+          scrolled
+            ? "bg-background/90 backdrop-blur-md border-b border-foreground/5 shadow-sm"
+            : "bg-transparent"
         }`}
       >
-        <a href="#" className="font-display text-lg font-bold tracking-tight text-foreground">
-          Night<span className="text-gradient-amber">Owl</span>
+        {/* Logo */}
+        <a href="#" className="flex items-center gap-3">
+          <img
+            src={owlLogo}
+            alt="NightOwl"
+            className="h-8 w-auto opacity-80"
+          />
+          <span className="font-display text-lg font-light tracking-wide text-foreground hidden sm:inline">
+            Night<span className="font-semibold">Owl</span>{" "}
+            <span className="text-muted-foreground text-sm font-body font-normal">Platform</span>
+          </span>
         </a>
 
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
-              key={link.href}
+              key={link.href + link.label}
               href={link.href}
-              className="text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="text-xs tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {link.label}
             </a>
           ))}
-        </div>
-
-        <div className="hidden md:flex items-center gap-3">
-          <Button variant="amber" size="sm" className="rounded-full text-xs">
-            Get in Touch
-          </Button>
         </div>
 
         {/* Mobile toggle */}
@@ -74,24 +79,19 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="nav-island mt-2 rounded-2xl p-6 md:hidden"
+            className="bg-background/95 backdrop-blur-md border-b border-foreground/5 p-6 md:hidden"
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
-                  key={link.href}
+                  key={link.href + link.label}
                   href={link.href}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <div className="pt-4 border-t border-foreground/10">
-                <Button variant="amber" size="sm" className="rounded-full text-xs w-full">
-                  Get in Touch
-                </Button>
-              </div>
             </div>
           </motion.div>
         )}
