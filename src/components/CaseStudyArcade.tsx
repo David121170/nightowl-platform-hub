@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Gamepad2, Maximize2, Joystick, Armchair, UsersRound } from "lucide-react";
+import venueArcade from "@/assets/venue-arcade.jpg";
 
 const stats = [
   { icon: Maximize2, label: "Total floor area", value: "2,800 sqm" },
