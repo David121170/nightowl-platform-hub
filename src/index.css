@@ -8,6 +8,7 @@
   :root {
     /* NightOwl olive-sage palette */
     --background: 86 12% 35%;
+    --background-alt: 86 10% 20%;
     --foreground: 40 30% 88%;
 
     --card: 86 10% 22%;
@@ -77,6 +78,11 @@
 }
 
 @layer components {
+  /* Alternating section backgrounds */
+  .section-alt {
+    background: hsl(var(--background-alt));
+  }
+
   .platform-card {
     background: hsl(86 10% 22% / 0.75);
     border: 1px solid hsla(33, 50%, 65%, 0.14);
@@ -112,7 +118,6 @@
     background-clip: text;
   }
 
-  /* Keep old class as alias */
   .text-gradient-amber {
     background: linear-gradient(135deg, hsl(33, 55%, 65%), hsl(38, 60%, 78%));
     -webkit-background-clip: text;
@@ -153,5 +158,14 @@
     inset: 0;
     background: linear-gradient(180deg, hsl(86 12% 35% / 0.85) 0%, hsl(86 12% 35% / 0.95) 100%);
     pointer-events: none;
+  }
+
+  /* Case study image hover zoom */
+  .case-study__image img {
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .case-study:hover .case-study__image img {
+    transform: scale(1.05);
   }
 }

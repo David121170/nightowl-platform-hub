@@ -31,9 +31,10 @@ const OurModelSection = () => {
           </p>
         </motion.div>
 
-        {/* Flow steps */}
+        {/* Flow steps with connector line */}
         <div className="relative">
-          <div className="hidden lg:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+          {/* Horizontal connector line (desktop) */}
+          <div className="hidden lg:block absolute top-8 left-[calc(100%/12)] right-[calc(100%/12)] h-0.5 bg-gradient-to-r from-primary/10 via-primary/40 to-primary/10" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {steps.map((step, i) => (

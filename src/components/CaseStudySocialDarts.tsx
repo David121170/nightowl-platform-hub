@@ -25,10 +25,10 @@ const CaseStudySocialDarts = () => {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="platform-card rounded-lg overflow-hidden"
       >
-        <div className="grid lg:grid-cols-2">
-          {/* Image */}
+        <div className="grid lg:grid-cols-[1fr_1fr]">
+          {/* Image — 50% width */}
           <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] overflow-hidden">
-            <img src={venueDarts} alt="Social darts venue with guests" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={venueDarts} alt="Flight Club social darts venue" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-br from-background/20 via-transparent to-background/40" />
           </div>
 
@@ -112,7 +112,7 @@ const CaseStudySocialDarts = () => {
                 Australia without them."
               </p>
               <cite className="text-primary text-xs font-semibold not-italic">
-                — Founding Partner, Social Darts Concept
+                — Founding Partner, Flight Club
               </cite>
             </blockquote>
           </div>

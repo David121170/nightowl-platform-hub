@@ -25,10 +25,10 @@ const CaseStudyRacing = () => {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="platform-card rounded-lg overflow-hidden"
       >
-        <div className="grid lg:grid-cols-2">
-          {/* Image */}
+        <div className="grid lg:grid-cols-[1fr_1fr]">
+          {/* Image — 50% width */}
           <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] overflow-hidden">
-            <img src={venueRacing} alt="Immersive racing lounge with simulators" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={venueRacing} alt="F1 Arcade racing simulator venue" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-br from-background/20 via-transparent to-background/40" />
           </div>
 
@@ -113,7 +113,7 @@ const CaseStudyRacing = () => {
                 — it all exceeded what we'd achieved in our home market."
               </p>
               <cite className="text-primary text-xs font-semibold not-italic">
-                — Founder, Immersive Racing Concept
+                — Founder, F1 Arcade
               </cite>
             </blockquote>
           </div>

@@ -38,9 +38,9 @@ const item = {
 
 const PartnersSection = () => {
   return (
-    <section id="partners" className="py-24 md:py-32 section-venue-bg">
+    <section id="partners" className="py-24 md:py-32 section-alt section-venue-bg">
       <img src={venueRooftop} alt="" className="venue-bg-img" />
-      <div className="venue-bg-overlay" />
+      <div className="venue-bg-overlay" style={{ background: 'linear-gradient(180deg, hsl(86 10% 20% / 0.85) 0%, hsl(86 10% 20% / 0.95) 100%)' }} />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
         <motion.div

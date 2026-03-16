@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
@@ -6,6 +6,15 @@ type ContactPath = "brand" | "investor";
 
 const ContactSection = () => {
   const [path, setPath] = useState<ContactPath>("brand");
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const tab = (e as CustomEvent).detail as ContactPath;
+      if (tab === "brand" || tab === "investor") setPath(tab);
+    };
+    window.addEventListener("nightowl:contact-tab", handler);
+    return () => window.removeEventListener("nightowl:contact-tab", handler);
+  }, []);
 
   return (
     <section id="contact" className="py-24 md:py-32">
@@ -87,7 +96,7 @@ const ContactSection = () => {
                   rows={4}
                   className="w-full bg-card/60 border border-primary/10 rounded-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
                 />
-                <Button variant="amber" size="lg" className="rounded-sm px-8 text-xs tracking-[0.15em] uppercase w-full md:w-auto mt-2">
+                <Button variant="amber" size="lg" className="rounded-sm px-8 text-xs tracking-[0.15em] uppercase w-full md:w-auto mt-2 glow-button">
                   {path === "brand" ? "Talk to Us About Your Brand" : "Speak to Our Investment Team"}
                 </Button>
               </form>

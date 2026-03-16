@@ -25,7 +25,7 @@ const CaseStudyArcade = () => {
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         className="platform-card rounded-lg overflow-hidden"
       >
-        <div className="grid lg:grid-cols-2">
+        <div className="grid lg:grid-cols-[1fr_1fr]">
           {/* Content — left on this card for visual variety */}
           <div className="p-8 md:p-10 lg:p-12 flex flex-col order-2 lg:order-1">
             <p className="text-primary font-body text-xs tracking-[0.2em] uppercase mb-3">
@@ -107,14 +107,14 @@ const CaseStudyArcade = () => {
                 could have been a two‑year process into a seamless launch."
               </p>
               <cite className="text-primary text-xs font-semibold not-italic">
-                — International Partner, Arcade Eatertainment Concept
+                — International Partner, Dave & Buster's
               </cite>
             </blockquote>
           </div>
 
-          {/* Image */}
+          {/* Image — 50% width */}
           <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] overflow-hidden order-1 lg:order-2">
-            <img src={venueArcade} alt="Arcade eatertainment venue with guests playing games" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={venueArcade} alt="Dave & Buster's arcade eatertainment venue" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-bl from-background/20 via-transparent to-background/40" />
           </div>
         </div>

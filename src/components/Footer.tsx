@@ -1,3 +1,4 @@
+import { Linkedin, Instagram } from "lucide-react";
 import owlLogo from "@/assets/nightowl-logo.svg";
 
 const Footer = () => {
@@ -12,16 +13,21 @@ const Footer = () => {
             </span>
           </div>
 
-          <div className="flex gap-8">
-            {["Privacy", "Terms", "Cookies"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-xs text-muted-foreground hover:text-primary transition-colors tracking-wide uppercase"
-              >
-                {item}
-              </a>
-            ))}
+          <div className="flex items-center gap-5">
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            >
+              <Linkedin size={18} strokeWidth={1.5} />
+            </a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+            >
+              <Instagram size={18} strokeWidth={1.5} />
+            </a>
           </div>
 
           <p className="text-xs text-muted-foreground font-light">
