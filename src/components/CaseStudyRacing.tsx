@@ -22,7 +22,7 @@ const CaseStudyRacing = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        className="platform-card rounded-2xl overflow-hidden"
+        className="platform-card rounded-lg overflow-hidden"
       >
         <div className="grid lg:grid-cols-2">
           {/* Image placeholder */}
