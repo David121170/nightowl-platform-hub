@@ -27,14 +27,9 @@ const CaseStudyRacing = () => {
       >
         <div className="grid lg:grid-cols-2">
           {/* Image placeholder */}
-          <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] bg-secondary/30 flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-background/40" />
-            <div className="relative z-10 text-center px-8">
-              <Flag className="w-12 h-12 text-primary/40 mx-auto mb-4" strokeWidth={1} />
-              <p className="text-muted-foreground text-sm tracking-widest uppercase">
-                Venue imagery
-              </p>
-            </div>
+          <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] overflow-hidden">
+            <img src={venueRacing} alt="Immersive racing lounge with simulators" className="absolute inset-0 w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-br from-background/20 via-transparent to-background/40" />
           </div>
 
           {/* Content */}
