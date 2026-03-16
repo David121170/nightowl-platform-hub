@@ -11,22 +11,19 @@ const steps = [
 
 const OurModelSection = () => {
   return (
-    <section id="our-model" className="py-[16vh] md:py-[20vh]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="our-model" className="py-24 md:py-32">
+      <div className="max-w-5xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-16 md:mb-20 max-w-3xl"
+          className="text-center mb-16 md:mb-20"
         >
-          <p className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4">
+          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6">
             Our Model
-          </p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold tracking-[-0.03em] leading-[0.95] mb-6">
-            A Repeatable Path from Concept to Returns
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-light">
             International founders partner with NightOwl for Australian market
             entry. Investors participate through structured co‑investment
             opportunities. NightOwl provides the central operations, data and
@@ -36,16 +33,9 @@ const OurModelSection = () => {
 
         {/* Flow steps */}
         <div className="relative">
-          {/* Connecting line */}
-          <div className="hidden lg:block absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <div className="hidden lg:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
-          >
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {steps.map((step, i) => (
               <motion.div
                 key={step.label}
@@ -55,20 +45,20 @@ const OurModelSection = () => {
                 transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
                 className="text-center"
               >
-                <div className="relative mx-auto w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                  <span className="font-display text-lg font-bold text-primary">
+                <div className="relative mx-auto w-16 h-16 rounded-full border border-primary/25 flex items-center justify-center mb-4 bg-background/50">
+                  <span className="font-display text-lg text-primary font-light">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
-                <h3 className="font-display text-base font-semibold text-foreground mb-1">
+                <h3 className="font-display text-base font-normal tracking-wide text-foreground mb-1">
                   {step.label}
                 </h3>
-                <p className="text-muted-foreground text-xs leading-relaxed">
+                <p className="text-muted-foreground text-xs leading-relaxed font-light">
                   {step.description}
                 </p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -3,10 +3,10 @@ import { ShieldCheck, Eye, Heart } from "lucide-react";
 
 const AlignmentSection = () => {
   return (
-    <section id="alignment" className="py-[16vh] md:py-[20vh]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="platform-card rounded-3xl p-10 md:p-16 lg:p-20 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
+    <section id="alignment" className="py-24 md:py-32">
+      <div className="max-w-5xl mx-auto px-6 md:px-12">
+        <div className="platform-card rounded-lg p-10 md:p-16 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <motion.div
@@ -15,13 +15,10 @@ const AlignmentSection = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-              <p className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4">
+              <h2 className="font-display text-3xl md:text-4xl font-light tracking-wide mb-6">
                 Co‑Investment & Alignment
-              </p>
-              <h2 className="font-display text-3xl md:text-5xl font-bold tracking-[-0.03em] leading-[0.95] mb-6">
-                Our Capital Is on the Line — Right Alongside Yours
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-12">
+              <p className="text-muted-foreground text-base leading-relaxed mb-12 font-light">
                 NightOwl invests its own capital into every brand we bring to
                 market. That means our incentives are fully aligned with our
                 co‑investors: we succeed together through long‑term brand value,
@@ -34,7 +31,7 @@ const AlignmentSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="grid sm:grid-cols-3 gap-6"
+              className="grid sm:grid-cols-3 gap-8"
             >
               {[
                 {
@@ -53,17 +50,14 @@ const AlignmentSection = () => {
                   desc: "Real‑time dashboards, quarterly reviews and full P&L visibility for every investor.",
                 },
               ].map((item) => (
-                <div
-                  key={item.title}
-                  className="text-center"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                    <item.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                <div key={item.title} className="text-center">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                    <item.icon className="w-4 h-4 text-primary" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-display text-sm font-semibold text-foreground mb-1">
+                  <h3 className="font-display text-sm font-normal tracking-wide text-foreground mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground text-xs leading-relaxed">
+                  <p className="text-muted-foreground text-xs leading-relaxed font-light">
                     {item.desc}
                   </p>
                 </div>
