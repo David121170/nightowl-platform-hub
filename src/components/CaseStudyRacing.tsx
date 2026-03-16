@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Flag, Gauge, Repeat, Trophy, ThumbsUp } from "lucide-react";
+import venueRacing from "@/assets/venue-racing.jpg";
 
 const stats = [
   { icon: Gauge, label: "Racing simulators", value: "24" },
