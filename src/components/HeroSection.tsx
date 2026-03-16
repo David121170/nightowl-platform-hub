@@ -24,10 +24,10 @@ const HeroSection = () => {
         <img
           src={heroImage}
           alt="Premium hospitality venue"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-25"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
 
       {/* Content */}
@@ -41,7 +41,7 @@ const HeroSection = () => {
           <img
             src={owlLogo}
             alt="NightOwl"
-            className="w-40 md:w-56 h-auto opacity-60"
+            className="w-40 md:w-56 h-auto opacity-70"
           />
         </motion.div>
 
@@ -55,7 +55,7 @@ const HeroSection = () => {
 
         <motion.p
           variants={item}
-          className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-12 font-light"
+          className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-[1.8] mb-12 font-light"
         >
           NightOwl partners with proven global concepts, adapts them for
           Australian guests and scales them through a shared operating platform

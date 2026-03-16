@@ -52,7 +52,7 @@ const PlatformCapabilitiesSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6 text-primary">
             The NightOwl Platform
           </h2>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-light">
@@ -75,13 +75,13 @@ const PlatformCapabilitiesSection = () => {
               variants={item}
               className="platform-card rounded-lg p-6 group cursor-default"
             >
-              <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
+              <div className="w-9 h-9 rounded-lg bg-primary/15 flex items-center justify-center mb-4 group-hover:bg-primary/25 transition-colors duration-300">
                 <cap.icon className="w-4 h-4 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-base font-normal tracking-wide text-foreground mb-1">
+              <h3 className="font-display text-base font-normal tracking-wide text-primary mb-1">
                 {cap.label}
               </h3>
-              <p className="text-muted-foreground text-xs leading-relaxed font-light">
+              <p className="text-muted-foreground text-xs leading-[1.7] font-light">
                 {cap.description}
               </p>
             </motion.div>
@@ -96,12 +96,12 @@ const PlatformCapabilitiesSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
-          <h3 className="font-display text-2xl md:text-3xl font-light tracking-wide mb-8">
+          <h3 className="font-display text-2xl md:text-3xl font-light tracking-wide mb-8 text-primary">
             NightOwl Mantras
           </h3>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-3">
             {mantras.map((mantra) => (
-              <p key={mantra} className="text-primary text-sm font-light tracking-wide">
+              <p key={mantra} className="text-foreground text-sm font-light tracking-wide">
                 {mantra}
               </p>
             ))}

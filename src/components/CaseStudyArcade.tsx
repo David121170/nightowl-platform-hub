@@ -38,7 +38,7 @@ const CaseStudyArcade = () => {
               Food, games and sport under one roof.
             </p>
 
-            <div className="space-y-4 text-muted-foreground text-sm leading-relaxed mb-8">
+            <div className="space-y-4 text-muted-foreground text-sm leading-[1.8] mb-8">
               <p>
                 A large‑format destination venue that brings together a
                 full‑service restaurant, a lively cocktail bar and a curated
@@ -65,7 +65,7 @@ const CaseStudyArcade = () => {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-secondary/30 rounded-xl p-4 border border-foreground/5"
+                  className="bg-card/60 rounded-xl p-4 border border-primary/10"
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <stat.icon className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
@@ -73,7 +73,7 @@ const CaseStudyArcade = () => {
                       {stat.label}
                     </span>
                   </div>
-                  <p className="font-display text-lg font-bold text-foreground">
+                  <p className="font-display text-lg font-bold text-primary">
                     {stat.value}
                   </p>
                 </div>
@@ -82,7 +82,7 @@ const CaseStudyArcade = () => {
 
             {/* Highlights */}
             <div className="mb-8">
-              <h4 className="font-display text-xs font-semibold uppercase tracking-wider text-foreground mb-3">
+              <h4 className="font-display text-xs font-semibold uppercase tracking-wider text-primary mb-3">
                 Highlights
               </h4>
               <ul className="space-y-2">
@@ -99,20 +99,20 @@ const CaseStudyArcade = () => {
             </div>
 
             {/* Quote */}
-            <blockquote className="border-l-2 border-primary/30 pl-5 mt-auto">
+            <blockquote className="border-l-2 border-primary/40 pl-5 mt-auto">
               <p className="text-muted-foreground text-sm italic leading-relaxed mb-2">
                 "We'd been looking for the right partner to bring our format to
                 Australia for years. NightOwl's local knowledge — from site
                 selection to liquor licensing to supplier networks — turned what
                 could have been a two‑year process into a seamless launch."
               </p>
-              <cite className="text-foreground text-xs font-semibold not-italic">
+              <cite className="text-primary text-xs font-semibold not-italic">
                 — International Partner, Arcade Eatertainment Concept
               </cite>
             </blockquote>
           </div>
 
-          {/* Image placeholder */}
+          {/* Image */}
           <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] overflow-hidden order-1 lg:order-2">
             <img src={venueArcade} alt="Arcade eatertainment venue with guests playing games" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-bl from-background/20 via-transparent to-background/40" />

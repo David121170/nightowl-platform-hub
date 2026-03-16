@@ -26,7 +26,7 @@ const CaseStudySocialDarts = () => {
         className="platform-card rounded-lg overflow-hidden"
       >
         <div className="grid lg:grid-cols-2">
-          {/* Image placeholder */}
+          {/* Image */}
           <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] overflow-hidden">
             <img src={venueDarts} alt="Social darts venue with guests" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-br from-background/20 via-transparent to-background/40" />
@@ -44,7 +44,7 @@ const CaseStudySocialDarts = () => {
               Tech‑driven social darts in a buzzing heritage space.
             </p>
 
-            <div className="space-y-4 text-muted-foreground text-sm leading-relaxed mb-8">
+            <div className="space-y-4 text-muted-foreground text-sm leading-[1.8] mb-8">
               <p>
                 Set inside a beautifully restored heritage building in a major
                 Australian CBD, this next‑generation social darts venue
@@ -70,7 +70,7 @@ const CaseStudySocialDarts = () => {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-secondary/30 rounded-xl p-4 border border-foreground/5"
+                  className="bg-card/60 rounded-xl p-4 border border-primary/10"
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <stat.icon className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
@@ -78,7 +78,7 @@ const CaseStudySocialDarts = () => {
                       {stat.label}
                     </span>
                   </div>
-                  <p className="font-display text-lg font-bold text-foreground">
+                  <p className="font-display text-lg font-bold text-primary">
                     {stat.value}
                   </p>
                 </div>
@@ -87,7 +87,7 @@ const CaseStudySocialDarts = () => {
 
             {/* Highlights */}
             <div className="mb-8">
-              <h4 className="font-display text-xs font-semibold uppercase tracking-wider text-foreground mb-3">
+              <h4 className="font-display text-xs font-semibold uppercase tracking-wider text-primary mb-3">
                 Highlights
               </h4>
               <ul className="space-y-2">
@@ -104,14 +104,14 @@ const CaseStudySocialDarts = () => {
             </div>
 
             {/* Quote */}
-            <blockquote className="border-l-2 border-primary/30 pl-5 mt-auto">
+            <blockquote className="border-l-2 border-primary/40 pl-5 mt-auto">
               <p className="text-muted-foreground text-sm italic leading-relaxed mb-2">
                 "NightOwl understood our vision from day one. They handled the
                 site, the licensing and the fit‑out while we focused on
                 perfecting the guest experience. We couldn't have launched in
                 Australia without them."
               </p>
-              <cite className="text-foreground text-xs font-semibold not-italic">
+              <cite className="text-primary text-xs font-semibold not-italic">
                 — Founding Partner, Social Darts Concept
               </cite>
             </blockquote>

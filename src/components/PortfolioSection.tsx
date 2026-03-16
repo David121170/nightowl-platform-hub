@@ -14,7 +14,7 @@ const PortfolioSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6 text-primary">
             Example Portfolio Concepts
           </h2>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-light">
