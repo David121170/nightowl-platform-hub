@@ -38,7 +38,7 @@ const CaseStudyRacing = () => {
               Simulation Entertainment
             </p>
             <h3 className="font-display text-2xl md:text-3xl font-bold tracking-[-0.03em] leading-[0.95] text-foreground mb-2">
-              Immersive Racing Lounge
+              F1 Arcade
             </h3>
             <p className="text-primary/80 font-body text-sm italic mb-6">
               Full‑motion racing, full‑service bar.
