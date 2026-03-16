@@ -3,17 +3,17 @@ import { User } from "lucide-react";
 
 const leaders = [
   {
-    name: "Name Surname",
-    title: "Co-Founder & CEO",
+    name: "David Heaton",
+    title: "CEO",
     bio: "20+ years in hospitality and growth capital.",
   },
   {
-    name: "Name Surname",
-    title: "Co-Founder & COO",
+    name: "Jamie Rhodes",
+    title: "COO",
     bio: "Former multi-site operator across the UK and Australia.",
   },
   {
-    name: "Name Surname",
+    name: "Ben Rasheed",
     title: "Head of Investments",
     bio: "15+ years in real estate and structured finance.",
   },
