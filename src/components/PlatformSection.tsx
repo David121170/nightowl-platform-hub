@@ -1,24 +1,30 @@
 import { motion } from "framer-motion";
-import { Search, Handshake, Settings } from "lucide-react";
+import { Globe, MapPin, Wallet, TrendingUp } from "lucide-react";
 
 const pillars = [
   {
-    icon: Search,
-    title: "Discover",
+    icon: Globe,
+    title: "Discover Global Concepts",
     description:
-      "We scour the globe for proven experiential hospitality concepts — from Tokyo's immersive dining to London's underground cocktail bars — and evaluate their potential for the Australian market.",
+      "Our dedicated scouting team identifies proven experiential brands across the UK, US, Europe and Asia. We evaluate track record, guest appeal and Australian market fit, then structure partnership terms that work for founders and investors alike.",
   },
   {
-    icon: Handshake,
-    title: "Co‑Invest",
+    icon: MapPin,
+    title: "Localise & Launch",
     description:
-      "We structure co‑investment alongside our partners for each portfolio brand, aligning incentives and sharing upside in every venue we bring to life.",
+      "We adapt every concept for Australian guests, sites and regulations — from menu engineering and licensing to design language and staffing. The result is a flagship venue that feels both authentically global and unmistakably local.",
   },
   {
-    icon: Settings,
-    title: "Operate",
+    icon: Wallet,
+    title: "Invest & Co‑Invest",
     description:
-      "Our world‑class operational engine handles everything from fit‑out and licensing to staffing and supply chain — so concepts launch flawlessly.",
+      "NightOwl commits its own capital to every brand we bring to market. Alongside that, we offer structured co‑investment opportunities for investors who want exposure to premium experiential hospitality assets.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Scale & Manage",
+    description:
+      "Once a flagship proves itself, we execute the roll‑out strategy: additional sites, landlord negotiations, supply‑chain optimisation and ongoing performance reporting — all powered by our central operating platform.",
   },
 ];
 
@@ -37,7 +43,7 @@ const item = {
 
 const PlatformSection = () => {
   return (
-    <section id="platform" className="py-[16vh] md:py-[20vh]">
+    <section id="what-we-do" className="py-[16vh] md:py-[20vh]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,15 +53,14 @@ const PlatformSection = () => {
           className="mb-16 md:mb-20"
         >
           <p className="text-primary font-body text-sm tracking-[0.2em] uppercase mb-4">
-            The Platform
+            What We Do
           </p>
           <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-[-0.03em] leading-[0.95] max-w-3xl">
-            The Architecture of Experience
+            From Discovery to Delivery
           </h2>
           <p className="text-muted-foreground text-lg mt-6 max-w-2xl leading-relaxed">
-            We bridge the gap between global concept and local culture. Through
-            disciplined co‑investment and a world‑class operational engine, we
-            scale the venues that define cities.
+            Every brand in our portfolio follows a disciplined journey — from
+            first handshake to opening night and beyond.
           </p>
         </motion.div>
 
@@ -64,7 +69,7 @@ const PlatformSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {pillars.map((pillar) => (
             <motion.div
@@ -75,10 +80,10 @@ const PlatformSection = () => {
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                 <pillar.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
               </div>
-              <h3 className="font-display text-xl font-semibold mb-3 text-foreground">
+              <h3 className="font-display text-lg font-semibold mb-3 text-foreground">
                 {pillar.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {pillar.description}
               </p>
             </motion.div>
