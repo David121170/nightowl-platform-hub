@@ -18,6 +18,7 @@ const Index = () => {
       <WhoWeAreSection />
       <PlatformSection />
       <OurModelSection />
+      <PortfolioSection />
       <PlatformCapabilitiesSection />
       <PartnersSection />
       <AlignmentSection />
