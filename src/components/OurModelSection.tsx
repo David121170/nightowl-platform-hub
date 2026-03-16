@@ -20,7 +20,7 @@ const OurModelSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6 text-primary">
             Our Model
           </h2>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-light">
@@ -33,7 +33,7 @@ const OurModelSection = () => {
 
         {/* Flow steps */}
         <div className="relative">
-          <div className="hidden lg:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+          <div className="hidden lg:block absolute top-10 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {steps.map((step, i) => (
@@ -45,15 +45,15 @@ const OurModelSection = () => {
                 transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
                 className="text-center"
               >
-                <div className="relative mx-auto w-16 h-16 rounded-full border border-primary/25 flex items-center justify-center mb-4 bg-background/50">
-                  <span className="font-display text-lg text-primary font-light">
+                <div className="relative mx-auto w-16 h-16 rounded-full border border-primary/30 flex items-center justify-center mb-4 bg-card/60">
+                  <span className="font-display text-lg text-primary font-semibold">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <h3 className="font-display text-base font-normal tracking-wide text-foreground mb-1">
                   {step.label}
                 </h3>
-                <p className="text-muted-foreground text-xs leading-relaxed font-light">
+                <p className="text-muted-foreground text-xs leading-[1.8] font-light">
                   {step.description}
                 </p>
               </motion.div>

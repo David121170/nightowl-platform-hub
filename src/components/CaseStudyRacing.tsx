@@ -26,7 +26,7 @@ const CaseStudyRacing = () => {
         className="platform-card rounded-lg overflow-hidden"
       >
         <div className="grid lg:grid-cols-2">
-          {/* Image placeholder */}
+          {/* Image */}
           <div className="case-study__image relative min-h-[280px] lg:min-h-[480px] overflow-hidden">
             <img src={venueRacing} alt="Immersive racing lounge with simulators" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-br from-background/20 via-transparent to-background/40" />
@@ -44,7 +44,7 @@ const CaseStudyRacing = () => {
               Full‑motion racing, full‑service bar.
             </p>
 
-            <div className="space-y-4 text-muted-foreground text-sm leading-relaxed mb-8">
+            <div className="space-y-4 text-muted-foreground text-sm leading-[1.8] mb-8">
               <p>
                 Part motorsport playground, part premium cocktail lounge — this
                 venue pairs state‑of‑the‑art full‑motion racing simulators with
@@ -71,7 +71,7 @@ const CaseStudyRacing = () => {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-secondary/30 rounded-xl p-4 border border-foreground/5"
+                  className="bg-card/60 rounded-xl p-4 border border-primary/10"
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <stat.icon className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
@@ -79,7 +79,7 @@ const CaseStudyRacing = () => {
                       {stat.label}
                     </span>
                   </div>
-                  <p className="font-display text-lg font-bold text-foreground">
+                  <p className="font-display text-lg font-bold text-primary">
                     {stat.value}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ const CaseStudyRacing = () => {
 
             {/* Highlights */}
             <div className="mb-8">
-              <h4 className="font-display text-xs font-semibold uppercase tracking-wider text-foreground mb-3">
+              <h4 className="font-display text-xs font-semibold uppercase tracking-wider text-primary mb-3">
                 Highlights
               </h4>
               <ul className="space-y-2">
@@ -105,14 +105,14 @@ const CaseStudyRacing = () => {
             </div>
 
             {/* Quote */}
-            <blockquote className="border-l-2 border-primary/30 pl-5 mt-auto">
+            <blockquote className="border-l-2 border-primary/40 pl-5 mt-auto">
               <p className="text-muted-foreground text-sm italic leading-relaxed mb-2">
                 "Honestly, the Australian launch outperformed every projection
                 we had. NightOwl's operations team treated our brand like their
                 own — the venue quality, the staffing, the guest feedback loops
                 — it all exceeded what we'd achieved in our home market."
               </p>
-              <cite className="text-foreground text-xs font-semibold not-italic">
+              <cite className="text-primary text-xs font-semibold not-italic">
                 — Founder, Immersive Racing Concept
               </cite>
             </blockquote>

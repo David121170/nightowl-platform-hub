@@ -32,7 +32,7 @@ const Navigation = () => {
       <nav
         className={`h-16 px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
           scrolled
-            ? "bg-background/90 backdrop-blur-md border-b border-foreground/5 shadow-sm"
+            ? "bg-background/90 backdrop-blur-md border-b border-primary/10 shadow-sm"
             : "bg-transparent"
         }`}
       >
@@ -41,11 +41,11 @@ const Navigation = () => {
           <img
             src={owlLogo}
             alt="NightOwl"
-            className="h-8 w-auto opacity-80"
+            className="h-8 w-auto opacity-90"
           />
           <span className="font-display text-lg font-light tracking-wide text-foreground hidden sm:inline">
             Night<span className="font-semibold">Owl</span>{" "}
-            <span className="text-muted-foreground text-sm font-body font-normal">Platform</span>
+            <span className="text-primary text-sm font-body font-normal">Platform</span>
           </span>
         </a>
 
@@ -55,7 +55,7 @@ const Navigation = () => {
             <a
               key={link.href + link.label}
               href={link.href}
-              className="text-xs tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="text-xs tracking-[0.1em] uppercase text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -79,14 +79,14 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="bg-background/95 backdrop-blur-md border-b border-foreground/5 p-6 md:hidden"
+            className="bg-background/95 backdrop-blur-md border-b border-primary/10 p-6 md:hidden"
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href + link.label}
                   href={link.href}
-                  className="text-sm tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-sm tracking-[0.1em] uppercase text-muted-foreground hover:text-primary transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}

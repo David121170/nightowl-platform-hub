@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import venueLounge from "@/assets/venue-lounge.jpg";
 
 const pillars = [
   {
@@ -25,8 +26,11 @@ const pillars = [
 
 const WhoWeAreSection = () => {
   return (
-    <section id="who-we-are" className="py-24 md:py-32">
-      <div className="max-w-5xl mx-auto px-6 md:px-12">
+    <section id="who-we-are" className="py-24 md:py-32 section-venue-bg">
+      <img src={venueLounge} alt="" className="venue-bg-img" />
+      <div className="venue-bg-overlay" />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +38,7 @@ const WhoWeAreSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16 md:mb-20"
         >
-          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-light tracking-wide mb-6 text-primary">
             The Group
           </h2>
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-light">
@@ -58,7 +62,7 @@ const WhoWeAreSection = () => {
               <h3 className="font-display text-xl md:text-2xl font-normal tracking-wide text-primary mb-3">
                 {pillar.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed font-light">
+              <p className="text-muted-foreground text-sm leading-[1.8] font-light">
                 {pillar.description}
               </p>
             </motion.div>
