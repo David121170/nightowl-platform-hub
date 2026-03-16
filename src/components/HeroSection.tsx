@@ -46,31 +46,30 @@ const HeroSection = () => {
 
         <motion.h1
           variants={item}
-          className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-[-0.04em] leading-[0.9] max-w-4xl mb-8"
+          className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em] leading-[0.95] max-w-5xl mb-8"
         >
-          Investing in the{" "}
-          <span className="text-gradient-amber">Social Fabric</span>{" "}
-          of Australia
+          Bringing the world's best experiential entertainment brands{" "}
+          <span className="text-gradient-amber">to life in Australia.</span>
         </motion.h1>
 
         <motion.p
           variants={item}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10"
+          className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-10"
         >
-          NightOwl Platform discovers, co-invests in, and operates the world's
-          most compelling experiential hospitality brands — building their
-          Australian home.
+          NightOwl partners with proven global concepts, adapts them for
+          Australian guests and scales them through a shared operating platform
+          and aligned investment structures.
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap gap-4">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Button variant="amber" size="lg" className="rounded-full px-8 text-base">
-              Request Access
+              Talk to Us About Your Brand
             </Button>
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
             <Button variant="ghost-light" size="lg" className="rounded-full px-8 text-base">
-              Learn More
+              Speak to Our Investment Team
             </Button>
           </motion.div>
         </motion.div>

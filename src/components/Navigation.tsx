@@ -4,9 +4,11 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
+  { label: "Who We Are", href: "#who-we-are" },
+  { label: "What We Do", href: "#what-we-do" },
+  { label: "Our Model", href: "#our-model" },
   { label: "Platform", href: "#platform" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "About", href: "#about" },
+  { label: "Partners", href: "#partners" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -37,12 +39,12 @@ const Navigation = () => {
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -50,11 +52,8 @@ const Navigation = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost-light" size="sm" className="rounded-full text-xs">
-            Partner Login
-          </Button>
           <Button variant="amber" size="sm" className="rounded-full text-xs">
-            Inquire
+            Get in Touch
           </Button>
         </div>
 
@@ -88,12 +87,9 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
-              <div className="flex gap-3 pt-4 border-t border-foreground/10">
-                <Button variant="ghost-light" size="sm" className="rounded-full text-xs flex-1">
-                  Partner Login
-                </Button>
-                <Button variant="amber" size="sm" className="rounded-full text-xs flex-1">
-                  Inquire
+              <div className="pt-4 border-t border-foreground/10">
+                <Button variant="amber" size="sm" className="rounded-full text-xs w-full">
+                  Get in Touch
                 </Button>
               </div>
             </div>
